@@ -8,8 +8,13 @@ function getSimpsonQuote() {
             console.log('data decoded from JSON:', simpson);
 
             const simpsonQuote = `
-                <p><strong>From ${simpson[0].character}</strong></p>
-                <p>Quote : ${simpson[0].quote}</p>
+                <div class="display">
+                    <div>
+                        <p><strong>From ${simpson[0].character}</strong></p>
+                        <p>Quote : ${simpson[0].quote}</p>
+                    </div>
+                    <img src=${simpson[0].image}>
+                </div>
             `
             const paragraphe = document.createElement('div');
             paragraphe.innerHTML = simpsonQuote;
